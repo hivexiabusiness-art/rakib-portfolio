@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none; /* ডিফল্ট মাউস হাইড */
+}
+
+body {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    font-family: 'Syne', sans-serif;
+    overflow-x: hidden;
+}
+
+#custom-cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #ff3e00; /* ভাইব্রেন্ট অরেঞ্জ */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+nav {
+    padding: 40px;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* লেখাটিকে স্ক্রিনের মাঝখানে রাখার জন্য */
+    padding-left: 10%;
+}
+
+.hero h1 {
+    font-size: 10vw; /* ফন্ট সাইজ একটু ছোট করা হয়েছে যাতে এক লাইনে ধরে */
+    line-height: 1;  /* লাইনের মধ্যবর্তী গ্যাপ ঠিক করার জন্য */
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #ffffff;
+    display: block; /* এটিকে নতুন লাইনে সুন্দরভাবে বসানোর জন্য */
+    margin-top: 10px; /* উপরের লাইন থেকে সামান্য গ্যাপ */
+}
+
+.work {
+    padding: 100px 10%;
+}
+
+.project-container {
+    width: 60%;
+    margin-left: auto; /* ডান দিকে সরিয়ে রাখা - Asymmetric Look */
+    position: relative;
+}
+
+.project-img {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+
+.project-img img {
+    width: 100%;
+    display: block;
+    filter: grayscale(100%);
+    transition: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-container:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.project-title h2 {
+    font-size: 3rem;
+    margin-top: 20px;
+}
